@@ -10,3 +10,47 @@ body {
     color: white;
     font-family: 'Times New Roman', Times, serif;
 }
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+#menu-toggle {
+    display: none;
+}
+
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    
+    #menu-toggle:checked + .menu-icon + nav ul {
+        display: flex;
+    }
+ }
